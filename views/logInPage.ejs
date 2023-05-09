@@ -1,0 +1,27 @@
+<%- include("templates/header") %>
+<div class="container-fluid d-flex justify-content-center">
+  <div id="login-page-card" class="text-center mx-auto my-4">
+    <h2>Log In</h2>
+    <form id="logInForm" action="/loggingin" method="post">
+      <input name="email" type="email" placeholder="email" class="my-1" />
+      <br />
+      <input
+        name="password"
+        type="password"
+        placeholder="password"
+        class="my-1"
+      />
+      <br />
+      <button
+        id="submitLogIn"
+        type="submit"
+        form="logInForm"
+        value="Submit"
+        class="btn btn-primary my-2"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+<%- include("templates/footer") %>

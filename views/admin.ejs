@@ -1,0 +1,34 @@
+<%- include("templates/header") %>
+<div class="admin-users">
+  <h2>Users</h2>
+  <ul class="list-group">
+    <% let i=0; %> <% for(i=0; i < users.length; i++) { %> <%-
+    include('templates/user', {user: users[i]}) %> <% } %>
+  </ul>
+</div>
+<script>
+  function handleAdminClick(event) {
+    console.log(event.target.id);
+    const userName =
+      event.target.parentNode.parentNode.querySelector(".user-name").innerText;
+    const action = event.target.id;
+    fetch("/handleAdminClick", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: userName, action: action }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Name sent successfully");
+        } else {
+          console.log("Error sending name");
+        }
+      })
+      .catch((error) => {
+        console.log("Error sending name:", error);
+      });
+  }
+</script>
+<%- include("templates/footer") %>

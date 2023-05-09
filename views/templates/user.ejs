@@ -1,0 +1,23 @@
+<li class="user-card list-group-item">
+  <div class="d-flex justify-content-between">
+    <h5 class="m-0mr">
+      <span class="user-name"><%= user.name %></span> (<%= user.user_type %>)
+    </h5>
+    <div>
+      <button
+        class="user-card-button btn btn-primary"
+        id="promote"
+        onclick="handleAdminClick(event)"
+      >
+        Promote to Admin
+      </button>
+      <button
+        class="user-card-button btn btn-secondary"
+        id="demote"
+        onclick="handleAdminClick(event)"
+      >
+        Demote to User
+      </button>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,26 @@
+<%- include("templates/header") %>
+<div class="container-fluid d-flex justify-content-center">
+  <div id="login-page-card" class="text-center mx-auto my-4">
+    <h2>Hello, <%= name %>.</h2>
+    <!-- <img src="<%= filePath %>" width="500" />
+    <br /> -->
+    <div class="row my-4">
+      <div class="col-sm-4">
+        <img src="/bunny.jpeg" class="img-fluid" alt="Image 1" />
+      </div>
+      <div class="col-sm-4">
+        <img src="/cat.jpeg" class="img-fluid" alt="Image 2" />
+      </div>
+      <div class="col-sm-4">
+        <img src="/dog.jpeg" class="img-fluid" alt="Image 3" />
+      </div>
+    </div>
+    <button id="signOutButton" class="btn btn-primary my-4">Sign out</button>
+  </div>
+</div>
+<script>
+  document.getElementById("signOutButton").addEventListener("click", () => {
+    window.location.href = "/logout";
+  });
+</script>
+<%- include("templates/footer") %>

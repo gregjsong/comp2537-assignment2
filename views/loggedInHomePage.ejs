@@ -1,0 +1,13 @@
+<%- include("templates/header") %>
+<h2>Hello, <%= name %>!</h2>
+<button id="goToMembersButton">Go to Members Area</button>
+<button id="logOutButton">Logout</button>
+<script>
+  document.getElementById("goToMembersButton").addEventListener("click", () => {
+    window.location.href = "/members";
+  });
+  document.getElementById("logOutButton").addEventListener("click", () => {
+    window.location.href = "/logout";
+  });
+</script>
+<%- include("templates/footer") %>
